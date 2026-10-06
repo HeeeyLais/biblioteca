@@ -32,7 +32,7 @@ public class Livro {
     @NotNull
     private String anoPublicacaoLivro;
     
-    @Column (unique = true, length = 20)
+    @Column (unique = true, length = 30)
     private String isbnLivro;
 
 }

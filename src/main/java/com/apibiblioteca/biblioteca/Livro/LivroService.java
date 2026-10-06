@@ -24,5 +24,11 @@ public class LivroService {
         return livroRepository.findAll();
     }
 
-    
+    public Livro buscarPorId(Long id){
+        return livroRepository.findById(id).orElseThrow(() -> new RuntimeException("Livro não encontrado"));
+    }
+
+    public List<Livro> buscarPorTitulo(String titulo){
+        return livroRepository.findByTituloLivroContainingIgnoreCase(titulo);
+    }
 }
